@@ -10,7 +10,32 @@
  */
 
 // Your code :
-
+let multiply = function(arg1, arg2){
+    let cpt = 0;
+    let result = 0;
+    let multiplier = 0;
+    let negative = false;
+    if (arg1 >= 0){
+	multiplier = arg1;
+    }
+    else {
+	multiplier = -arg1;
+	negative = true;
+    }
+    let count = function(n){
+	if (n < multiplier){
+	    result = result + arg2;
+	    count(n + 1);
+	}
+	return result;
+    }
+    let finalResult = count(cpt);
+    if (negative == true){
+	finalResult = -finalResult;
+    }
+    return finalResult;
+};
+    
 //* Begin of tests
 const assert = require('assert')
 

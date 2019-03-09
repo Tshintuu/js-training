@@ -5,7 +5,21 @@
  * and return an array of each words using space as a delimiter
  *
  */
-
+let words = function(string){
+    let result = [];
+    let word = "";
+    for (let i=0; i < string.length; i++){
+	if (string[i] == " "){
+	    result.push(word);
+	    word = "";
+	}
+	else{
+	    word = word + string[i];
+	}
+    }
+    result.push(word);
+    return result;
+};
 
 //* Begin of tests
 const assert = require('assert')

@@ -9,7 +9,25 @@
  */
 
 // Your code :
-
+let multiply = function(arg1, arg2){
+    let result = 0;
+    let multiplier = 0;
+    let negative = false;
+    if (arg1 >= 0){
+	multiplier = arg1;
+    }
+    else {
+	multiplier = -arg1;
+	negative = true;
+    }
+    for (let i = 0; i < multiplier; i++){
+	result = result + arg2
+    }
+    if (negative == true){
+	result = -result;
+    }
+    return result;
+};
 //* Begin of tests
 const assert = require('assert')
 
