@@ -11,7 +11,7 @@
 
 // Your code :
 let abs = function(arg){
-    return arg > 0 ? arg : -arg;
+    return arg >= 0 ? arg : -arg;
 };
 //* Begin of tests
 const assert = require('assert')
